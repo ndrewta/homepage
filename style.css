@@ -45,6 +45,7 @@ body {
   top: -190px;
   background-color: rgb(70, 179, 241);
   transform: skewY(-15deg);
+  overflow: hidden;
 }
 
 header {
@@ -59,6 +60,7 @@ header {
 #header-div {
   background-color: rgb(255, 255, 255);
   max-width: 100%;
+  max-height: 550px;
   min-height: 500px;
   margin: 55px 0px;
   box-shadow: 2px 2px 3px grey;
@@ -96,10 +98,10 @@ header {
 }
 
 #header-icons {
-  padding-right: 20px;
-  position: absolute;
-  right: 0;
-  bottom: 60px;
+  display: flex;
+  margin-top: 10px;
+  justify-content: end;
+  padding-bottom: 20px;
   opacity: 1;
 }
 
@@ -199,6 +201,7 @@ footer {
 footer > img {
   padding: 30px;
   max-width: 450px;
+  min-width: 300px;
 }
 
 #footer-icons {
@@ -219,7 +222,7 @@ footer > img {
   }
 
   #background-shape {
-    width: 800px;
+    width: 768px;
     height: 600px;
     top: -190px;
     background-color: rgb(70, 179, 241);
@@ -233,6 +236,7 @@ footer > img {
     margin-top: 0;
     margin-bottom: 0;
     position: relative;
+    min-width: 500px;
   }
 
   #header-div {
@@ -280,6 +284,7 @@ footer > img {
     margin-top: 40px;
     max-width: 768px;
     padding: 0;
+    min-width: 500px;
   }
 
   main > h1 {
@@ -354,20 +359,29 @@ footer > img {
 @media (max-width: 480px) {
   body {
     max-width: 480px;
-    padding-top: 900px;
+    padding-top: 1000px;
   }
 
   #background-shape {
-    width: 850px;
+    width: 768px;
     height: 800px;
     top: -120px;
+    left: 0;
     background-color: rgb(70, 179, 241);
-    transform: skewY(-25deg);
+    transform: skewY(-16deg);
+  }
+
+  header {
+    margin: 25px 0;
+    max-width: 100%;
+    margin-bottom: 80px;
+    padding: 0;
+    position: relative;
   }
 
   #header-div > #image-name {
-    top: -320px;
-    left: 220px;
+    top: -400px;
+    left: 170px;
     color: rgb(0, 0, 0);
     font-size: 100px;
     max-width: 40px;
@@ -377,17 +391,8 @@ footer > img {
     min-width: 550px;
     position: absolute;
     margin: 0;
-    top: -900px;
-    left: 195px;
-  }
-
-  header {
-    margin: 25px 0;
-    max-width: 100%;
-
-    margin-bottom: 80px;
-    padding: 0;
-    position: relative;
+    top: -975px;
+    left: 130px;
   }
 
   #header-div {
@@ -395,14 +400,15 @@ footer > img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 80%;
+    max-width: 100%;
+    min-width: 650px;
     padding: 0 50px;
-    margin: 0 0 0 100px;
+    margin: 0 0 0 0;
     box-shadow: none;
   }
 
   #header-icons {
-    margin: -20px auto 0 auto;
+    margin: 0 auto;
     padding: 0;
     position: static;
     opacity: 1;
@@ -430,6 +436,7 @@ footer > img {
   main {
     margin-top: 150px;
     max-width: 100%;
+    min-width: 650px;
   }
 
   main > h1 {
@@ -498,10 +505,11 @@ footer > img {
     flex-direction: column;
     background-color: rgb(70, 179, 241);
     margin-top: 80px;
-    margin-left: 50px;
+    margin-left: 287px;
     padding: 25px 0;
     font-size: 28px;
     overflow: hidden;
+    width: 768px;
   }
 
   #footer-information {
@@ -509,7 +517,7 @@ footer > img {
     flex-direction: column;
     padding: 0 25px;
     max-width: 480px;
-    margin-left: 125px;
+    margin-left: 100px;
   }
 
   #footer-information > h3 {
@@ -543,5 +551,6 @@ footer > img {
     padding-top: 50px;
     margin-bottom: -55px;
     min-width: 100%;
+    margin-left: -30px;
   }
 }
